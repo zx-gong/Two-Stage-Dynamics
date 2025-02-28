@@ -215,13 +215,13 @@ if __name__ == '__main__':
     parser.add_argument('--lnum', type=int, default=-1, help='Layers to edit', choices=list(range(-1, 28)))
     parser.add_argument('--model_path',
                         type=str,
-                        default="/home/zxgong/laser-main/data/Llama2/Llama-2-7b-hf",
+                        default="/data/Llama2/Llama-2-7b-hf",
                         help="Place where model weights are stored")
     parser.add_argument('--home_dir', type=str,
-                        default="/home/zxgong/laser-main/data/iclr/counterfact/gpt2_results",
+                        default="/data/original/counterfact/gpt2_results",
                         help='Directory where the data is')
     parser.add_argument('--dataset_file', type=str,
-                        default="/home/zxgong/laser-main/data/counterfact",
+                        default="/data/counterfact",
                         help='Directory where the data is')
 
     args = parser.parse_args()
