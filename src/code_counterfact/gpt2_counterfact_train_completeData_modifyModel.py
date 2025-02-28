@@ -161,7 +161,7 @@ class GPT2Experiment:
         is_correct_num = 0.0
         self.logger.log(f"Starting a new intervention with rate {args.rate}. "
                         f"Dataset size {dataset_size}. Batch size {args.batch_size}")
-        checkpoint = torch.load('/home/zxgong/laser-main/src/code_counterfact/gpt2_counterfact_epoch_5.pt') 
+        checkpoint = torch.load('/src/code_counterfact/gpt2_counterfact_epoch_5.pt') 
         model.load_state_dict(checkpoint)
         
         for i in range(1,7):
@@ -216,13 +216,13 @@ if __name__ == '__main__':
     parser.add_argument('--lnum', type=int, default=24, help='Layers to edit', choices=list(range(-1, 28)))
     parser.add_argument('--model_path',
                         type=str,
-                        default="/home/zxgong/laser-main/data/Llama2/Llama-2-7b-hf",
+                        default="/data/Llama2/Llama-2-7b-hf",
                         help="Place where model weights are stored")
     parser.add_argument('--home_dir', type=str,
-                        default="/home/zxgong/laser-main/data/coro/counterfact/gpt2_results",
+                        default="/data/coro/counterfact/gpt2_results",
                         help='Directory where the data is')
     parser.add_argument('--dataset_file', type=str,
-                        default="/home/zxgong/laser-main/data/counterfact",
+                        default="/data/counterfact",
                         help='Directory where the data is')
 
     args = parser.parse_args()
