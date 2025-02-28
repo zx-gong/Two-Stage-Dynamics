@@ -17,3 +17,6 @@ python scripts/get_hotpot.py
 ```
 
 ## Run a sample code
+1. Enter into the directory src/code_counterfact
+2. Verifying Two-Stage Learning: Run `python gpt2_counterfact_train_original.py --lnum -1`
+3. Verify Spectral Characteristics: Run `python gpt2_counterfact_train_modifyModel.py --lname attn --rate 9`. Modify the parameter within the range of 0 to 9.
