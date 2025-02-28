@@ -161,7 +161,7 @@ class GPT2Experiment:
         is_correct_num = 0.0
         self.logger.log(f"Starting a new intervention with rate {args.rate}. "
                         f"Dataset size {dataset_size}. Batch size {args.batch_size}")
-        checkpoint = torch.load('/src/code_counterfact/gpt2_counterfact_epoch_5.pt') 
+        checkpoint = torch.load('/data/original/counterfact/gpt2_results/gpt2/rank-reduction/None/gpt2_counterfact_epoch_5.pt') 
         model.load_state_dict(checkpoint)
         
         for i in range(1,7):
