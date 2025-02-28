@@ -43,7 +43,7 @@ class GPT2Experiment:
         dataset_size = len(dataset)
         self.logger.log(f"Starting training with rate {args.rate}. "
                         f"Dataset size {dataset_size}. Batch size {args.batch_size}")
-        checkpoint = torch.load('/home/zxgong/laser-main/data/iclr/hotpot_oneword_noprompt_T10/gpt2_results/gpt2/rank-reduction/None/gpt2_hotpot_oneword_epoch_8.pt') 
+        checkpoint = torch.load('/data/original/hotpot_oneword_noprompt_T10/gpt2_results/gpt2/rank-reduction/None/gpt2_hotpot_oneword_epoch_8.pt') 
         model.load_state_dict(checkpoint)
 
         for i in range(1,7):
@@ -219,10 +219,10 @@ if __name__ == '__main__':
     parser.add_argument('--lnum', type=int, default=24, help='Layers to edit', choices=list(range(-1, 28)))
     parser.add_argument('--model_path',
                         type=str,
-                        default="/home/zxgong/laser-main/data/Llama2/Llama-2-7b-hf",
+                        default="/data/Llama2/Llama-2-7b-hf",
                         help="Place where model weights are stored")
     parser.add_argument('--home_dir', type=str,
-                        default="/home/zxgong/laser-main/data/coro/hotpot_oneword_noprompt/gpt2_results",
+                        default="/data/modify/hotpot_oneword_noprompt/gpt2_results",
                         help='Directory where the data is')
     parser.add_argument('--dataset_file', type=str,
                         default="None",
