@@ -219,7 +219,7 @@ if __name__ == '__main__':
                         default="/data/Llama2/Llama-2-7b-hf",
                         help="Place where model weights are stored")
     parser.add_argument('--home_dir', type=str,
-                        default="/data/coro/counterfact/gpt2_results",
+                        default="/data/modify/counterfact/gpt2_results",
                         help='Directory where the data is')
     parser.add_argument('--dataset_file', type=str,
                         default="/data/counterfact",
