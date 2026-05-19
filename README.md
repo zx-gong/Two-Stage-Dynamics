@@ -3,7 +3,7 @@ This repository contains the source code of our paper. Majority of the code is b
 
 **Disentangling Feature Structure: A Mathematically Provable Two-Stage Training Dynamics in Transformers**
 
-Zixuan Gong, Jiaye Teng, Yong Liu
+Zixuan Gong, Shijia Li, Yong Liu, Jiaye Teng
 
 ## Preparation
 1. Install the dependencies for our code.
